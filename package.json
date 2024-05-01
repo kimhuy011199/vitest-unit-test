@@ -1,0 +1,17 @@
+{
+  "name": "vitest-unit-test",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test-ui": "vitest --ui"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@vitest/ui": "^1.5.3",
+    "vitest": "^1.5.3"
+  }
+}
