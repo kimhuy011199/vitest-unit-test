@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "test-ui": "vitest --ui"
+    "test-ui": "vitest --ui --coverage.enabled=true"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@vitest/coverage-v8": "^1.5.3",
     "@vitest/ui": "^1.5.3",
     "vitest": "^1.5.3"
   }
