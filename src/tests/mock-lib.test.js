@@ -1,6 +1,7 @@
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect, afterEach } from 'vitest';
 import { generateOtp } from '../mock-lib';
 import { generate } from '../libs/otplib';
+// import * as otplib from '../libs/otplib';
 
 vi.mock('../libs/otplib');
 
@@ -31,6 +32,10 @@ describe('test suite', () => {
 });
 
 describe('generateOtp', () => {
+  // afterEach(() => {
+  //   vi.resetAllMocks();
+  // });
+
   it('should return otp', () => {
     vi.mocked(generate).mockReturnValue('1234');
 
@@ -52,12 +57,13 @@ describe('generateOtp', () => {
 
 // describe('otplib', () => {
 //   it('should generate otp', () => {
-//     const spy = vi.spyOn(global, 'generate');
+//     const spy = vi.spyOn(otplib, 'generate');
 
 //     const otp = generateOtp();
 
 //     const generatedOtp = spy.mock.results[0].value;
 
 //     expect(otp).toBe(generatedOtp);
+//     expect(generate).toHaveBeenCalledOnce();
 //   });
 // });
